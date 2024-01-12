@@ -30,12 +30,6 @@ public class Zoo {
         }
     }
 
-    public void makeMove() {
-        for (Animal animal : animals) {
-            animal.makeMove();
-        }
-    }
-
     public int getNumberOfAnimals() {
         return animals.size();
     }

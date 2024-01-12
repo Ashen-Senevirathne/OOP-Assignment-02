@@ -40,29 +40,4 @@ public abstract class Animal {
         return categories.contains("walker");
     }
 
-    public void makeMove() {
-        if (isSwimmer()) {
-            swim();
-        }
-
-        if (isFlyer()) {
-            fly();
-        }
-
-        if (isWalker()) {
-            walk();
-        }
-    }
-
-    public void swim(){
-        System.out.println(this.getClass().getSimpleName() + " - " + name  + " swimming.");
-    }
-
-    public void fly(){
-        System.out.println(this.getClass().getSimpleName() + " - " + name  + " flying.");
-    }
-
-    public void walk(){
-        System.out.println(this.getClass().getSimpleName() + " - " + name  + " walking");
-    }
 }

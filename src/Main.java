@@ -4,15 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Zoo zoo = new Zoo();
 
-        IAnimalFactory elephantFactory = new ElephantFactory();
-        IAnimalFactory fishFactory = new FishFactory();
-        IAnimalFactory seaBirdFactory = new SeaBirdFactory();
-        IAnimalFactory parrotFactory = new ParrotFactory();
-
-        zoo.addAnimal(elephantFactory.createAnimal("Tom"));
-        zoo.addAnimal(fishFactory.createAnimal("Nemo"));
-        zoo.addAnimal(seaBirdFactory.createAnimal("Seagull"));
-        zoo.addAnimal(parrotFactory.createAnimal("Polly"));
+        zoo.addAnimal(new Elephant("Tom"));
+        zoo.addAnimal(new Fish("Nemo"));
+        zoo.addAnimal(new SeaBird("Seagull"));
+        zoo.addAnimal(new Parrot("Polly"));
         System.out.println("----------------------------------------------------------------------------");
 
         zoo.makeAllAnimalsSleep();
@@ -20,8 +15,6 @@ public class Main {
         zoo.makeAllAnimalsWakeUp();
         System.out.println("----------------------------------------------------------------------------");
         zoo.makeAllAnimalsEat();
-        System.out.println("----------------------------------------------------------------------------");
-        zoo.makeMove();
 
         System.out.println("----------------------------------------------------------------------------");
         System.out.println("Number of animals in the zoo: " + zoo.getNumberOfAnimals());
