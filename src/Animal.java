@@ -2,9 +2,9 @@ import java.util.List;
 
 // Animal interface
 public abstract class Animal {
-    private String name;
-    private List<String> categories;
-    private boolean isSleeping;
+    protected String name;
+    protected List<String> categories;
+    protected boolean isSleeping;
 
     public Animal(String name, List<String> categories) {
         this.name = name;
@@ -38,5 +38,31 @@ public abstract class Animal {
 
     public boolean isWalker() {
         return categories.contains("walker");
+    }
+
+    public void makeMove() {
+        if (isSwimmer()) {
+            swim();
+        }
+
+        if (isFlyer()) {
+            fly();
+        }
+
+        if (isWalker()) {
+            walk();
+        }
+    }
+
+    public void swim(){
+        System.out.println(this.getClass().getSimpleName() + " - " + name  + " swimming.");
+    }
+
+    public void fly(){
+        System.out.println(this.getClass().getSimpleName() + " - " + name  + " flying.");
+    }
+
+    public void walk(){
+        System.out.println(this.getClass().getSimpleName() + " - " + name  + " walking");
     }
 }

@@ -20,6 +20,8 @@ public class Main {
         zoo.makeAllAnimalsWakeUp();
         System.out.println("----------------------------------------------------------------------------");
         zoo.makeAllAnimalsEat();
+        System.out.println("----------------------------------------------------------------------------");
+        zoo.makeMove();
 
         System.out.println("----------------------------------------------------------------------------");
         System.out.println("Number of animals in the zoo: " + zoo.getNumberOfAnimals());
@@ -30,26 +32,14 @@ public class Main {
 
         System.out.println("----------------------------------------------------------------------------");
         List<Animal> swimmers = zoo.getAnimalsWithBehavior(swimmerBehavior);
-        for (Animal swimmer:
-             swimmers) {
-            System.out.println( swimmer.getClass().getSimpleName() + " - " + swimmer.getName() + " is swimming.");
-        }
         System.out.println("Number of swimmers in the zoo: " + swimmers.size());
 
         System.out.println("----------------------------------------------------------------------------");
         List<Animal> flyers = zoo.getAnimalsWithBehavior(flyerBehavior);
-        for (Animal flyer:
-                flyers) {
-            System.out.println( flyer.getClass().getSimpleName() + " - " + flyer.getName() + " is flying.");
-        }
         System.out.println("Number of flyers in the zoo: " + flyers.size());
 
         System.out.println("----------------------------------------------------------------------------");
         List<Animal> walkers = zoo.getAnimalsWithBehavior(walkerBehavior);
-        for (Animal walker:
-                walkers) {
-            System.out.println( walker.getClass().getSimpleName() + " - " + walker.getName() + " is walking.");
-        }
         System.out.println("Number of walkers in the zoo: " + walkers.size());
         System.out.println("----------------------------------------------------------------------------");
     }
