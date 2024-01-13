@@ -1,4 +1,4 @@
-import java.util.List;
+import animals.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,25 +15,18 @@ public class Main {
         zoo.makeAllAnimalsWakeUp();
         System.out.println("----------------------------------------------------------------------------");
         zoo.makeAllAnimalsEat();
+        System.out.println("----------------------------------------------------------------------------");
+        zoo.makeSwimmersSwim();
+        System.out.println("----------------------------------------------------------------------------");
+        zoo.makeFlyersFly();
+        System.out.println("----------------------------------------------------------------------------");
+        zoo.makeWalkersWalk();
 
         System.out.println("----------------------------------------------------------------------------");
         System.out.println("Number of animals in the zoo: " + zoo.getNumberOfAnimals());
 
-        IAnimalBehavior swimmerBehavior = new SwimmerBehavior();
-        IAnimalBehavior flyerBehavior = new FlyerBehavior();
-        IAnimalBehavior walkerBehavior = new WalkerBehavior();
-
         System.out.println("----------------------------------------------------------------------------");
-        List<Animal> swimmers = zoo.getAnimalsWithBehavior(swimmerBehavior);
-        System.out.println("Number of swimmers in the zoo: " + swimmers.size());
-
-        System.out.println("----------------------------------------------------------------------------");
-        List<Animal> flyers = zoo.getAnimalsWithBehavior(flyerBehavior);
-        System.out.println("Number of flyers in the zoo: " + flyers.size());
-
-        System.out.println("----------------------------------------------------------------------------");
-        List<Animal> walkers = zoo.getAnimalsWithBehavior(walkerBehavior);
-        System.out.println("Number of walkers in the zoo: " + walkers.size());
+        zoo.showAnimalsCountByCategory();
         System.out.println("----------------------------------------------------------------------------");
     }
 }

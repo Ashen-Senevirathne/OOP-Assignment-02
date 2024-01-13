@@ -1,14 +1,16 @@
-import java.util.List;
+package animals;
 
-// Animal interface
+import behaviours.IFlyer;
+import behaviours.ISwimmer;
+import behaviours.IWalker;
+
+// animal.Animal interface
 public abstract class Animal {
     protected String name;
-    protected List<String> categories;
     protected boolean isSleeping;
 
-    public Animal(String name, List<String> categories) {
+    public Animal(String name) {
         this.name = name;
-        this.categories = categories;
         this.isSleeping = false;
     }
 
@@ -29,15 +31,15 @@ public abstract class Animal {
     public abstract void eat();
 
     public boolean isSwimmer() {
-        return categories.contains("swimmer");
+        return this instanceof ISwimmer;
     }
 
     public boolean isFlyer() {
-        return categories.contains("flyer");
+        return this instanceof IFlyer;
     }
 
     public boolean isWalker() {
-        return categories.contains("walker");
+        return this instanceof IWalker;
     }
 
 }
