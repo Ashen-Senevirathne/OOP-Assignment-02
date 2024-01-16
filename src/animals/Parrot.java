@@ -9,11 +9,11 @@ public class Parrot extends Animal implements IFlyer {
 
     @Override
     public void eat() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " eat fruits!");
+        System.out.println(this.getClassName() + " - " + this.getName() + " eat fruits!");
     }
 
     @Override
     public void fly() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " flying.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " flying.");
     }
 }

@@ -20,12 +20,12 @@ public abstract class Animal {
 
     public void sleep() {
         isSleeping = true;
-        System.out.println(this.getClass().getSimpleName() + " - " + name  + " is sleeping.");
+        System.out.println(getClassName() + " - " + name  + " is sleeping.");
     }
 
     public void wakeUp() {
         isSleeping = false;
-        System.out.println(this.getClass().getSimpleName() + " - " + name  + " woke up.");
+        System.out.println(getClassName() + " - " + name  + " woke up.");
     }
 
     public abstract void eat();
@@ -40,6 +40,10 @@ public abstract class Animal {
 
     public boolean isWalker() {
         return this instanceof IWalker;
+    }
+
+    public String getClassName(){
+        return this.getClass().getSimpleName();
     }
 
 }

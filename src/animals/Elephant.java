@@ -9,11 +9,11 @@ public class Elephant extends Animal implements IWalker {
 
     @Override
     public void eat() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " eat leaves.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " eat leaves.");
     }
 
     @Override
     public void walk() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " walking.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " walking.");
     }
 }

@@ -10,16 +10,16 @@ public class SeaBird extends Animal implements IFlyer, ISwimmer {
 
     @Override
     public void eat() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " eat small fishes!");
+        System.out.println(this.getClassName() + " - " + this.getName() + " eat small fishes!");
     }
 
     @Override
     public void fly() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " flying.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " flying.");
     }
 
     @Override
     public void swim() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " swimming.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " swimming.");
     }
 }

@@ -9,11 +9,11 @@ public class Fish extends Animal implements ISwimmer {
 
     @Override
     public void eat() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " eat small fishes and leaves!");
+        System.out.println(this.getClassName() + " - " + this.getName() + " eat small fishes and leaves!");
     }
 
     @Override
     public void swim() {
-        System.out.println(this.getClass().getSimpleName() + " - " + this.getName() + " swimming.");
+        System.out.println(this.getClassName() + " - " + this.getName() + " swimming.");
     }
 }

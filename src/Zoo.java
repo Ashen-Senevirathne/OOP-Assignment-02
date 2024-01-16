@@ -18,21 +18,15 @@ public class Zoo {
     }
 
     public void makeAllAnimalsSleep() {
-        for (Animal animal : animals) {
-            animal.sleep();
-        }
+        animals.forEach(animal -> animal.sleep());
     }
 
     public void makeAllAnimalsWakeUp() {
-        for (Animal animal : animals) {
-            animal.wakeUp();
-        }
+        animals.forEach(animal -> animal.wakeUp());
     }
 
     public void makeAllAnimalsEat() {
-        for (Animal animal : animals) {
-            animal.eat();
-        }
+       animals.forEach(animal -> animal.eat());
     }
 
     public int getNumberOfAnimals() {
